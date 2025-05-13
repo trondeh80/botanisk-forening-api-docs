@@ -43,3 +43,39 @@ Responsobjektet inneholder:
 For neste side:  
 ```http
 GET /wp-json/calendar/v1/events/json?...&page=2
+
+## Eksempel på JSON-respons fra `/wp-json/calendar/v1/events/json`
+
+Nedenfor ser du et kort eksempel på hvordan responsen fra API-endepunktet kan se ut når du henter én enkelt event. Feltene `count`, `max`, `page`, `start` og `end` viser paginering — her er det totalt 128 events, 25 per side, og denne kallet viser side 1 (element 1–25).
+
+```json
+{
+  "items": [
+    {
+      "title": "Kartleggingsprogram, 2025",
+      "content": "Kartleggingsgruppen er åpen for alle. Her er årets program. Kontakt Alf Harry Øygarden for mer informasjon.",
+      "id": 14288,
+      "from": "1741765200",
+      "to": "1751234400",
+      "isAllDay": "",
+      "isCancelled": "",
+      "location": "",
+      "organizer": {
+        "id": "15",
+        "name": "Sunnhordland Botaniske Forening",
+        "selected": ""
+      },
+      "image": "https://botaniskforening.no/wp-content/uploads/2021/04/Tiriltunge-2000x500.jpg",
+      "url": "https://botaniskforening.no/kalender/kartleggingsprogram-2025",
+      "categories": ["Foredrag", "Kartlegging", "Kurs", "Møte", "Tur"],
+      "isFull": false,
+      "county": "Hordaland",
+      "municipality": ""
+    }
+  ],
+  "count": 128,
+  "max": 25,
+  "page": 1,
+  "start": 1,
+  "end": 25
+}
