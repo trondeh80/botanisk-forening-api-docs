@@ -43,6 +43,7 @@ Responsobjektet inneholder:
 For neste side:  
 ```http
 GET /wp-json/calendar/v1/events/json?...&page=2
+```
 
 ## Eksempel på JSON-respons fra `/wp-json/calendar/v1/events/json`
 
