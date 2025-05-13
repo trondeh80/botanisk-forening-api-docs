@@ -106,3 +106,5 @@ Hvert element i `items`-arrayen representerer én aktivitet (event) og har følg
 | `isFull`        | `boolean`   | `true` dersom maks. deltakerantall er nådd, `false` ellers.                                |
 | `county`        | `string`    | Navn på fylket der aktiviteten finner sted (f.eks. `"Hordaland"`).                         |
 | `municipality`  | `string`    | Navn på kommunen (f.eks. `"Bergen"`); tom streng hvis ikke satt.                            |
+
+
