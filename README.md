@@ -107,4 +107,9 @@ Hvert element i `items`-arrayen representerer én aktivitet (event) og har følg
 | `county`        | `string`    | Navn på fylket der aktiviteten finner sted (f.eks. `"Hordaland"`).                         |
 | `municipality`  | `string`    | Navn på kommunen (f.eks. `"Bergen"`); tom streng hvis ikke satt.                            |
 
+### Vilkår for bruk
 
+API‐et er kun tilgjengelig etter forhåndsavtale med Norsk Botanisk Forening. All bruk uten gyldig avtale anses som uautorisert. Seksjonen for API-nøkler og autentisering er under utvikling og vil bli oppdatert så snart funksjonaliteten aktiveres. Ta kontakt med oss for å få tilgang og mer informasjon om lisensiering og support. 
+
+Norsk Botanisk Forening
+https://botaniskforening.no/om-oss
