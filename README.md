@@ -60,7 +60,7 @@ Nedenfor ser du et kort eksempel på hvordan responsen fra API-endepunktet kan s
       "to": 1751234400000,
       "isAllDay": false,
       "isCancelled": false,
-      "location": "",
+      "location": "58.0201227,7.431161700000001",
       "organizer": {
         "id": "15",
         "name": "Sunnhordland Botaniske Forening",
