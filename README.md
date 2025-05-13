@@ -80,3 +80,37 @@ Nedenfor ser du et kort eksempel på hvordan responsen fra API-endepunktet kan s
   "start": 1,
   "end": 25
 }
+```
+
+## Struktur for hvert `item` i `items`-arrayen
+
+Hvert element i `items`-arrayen representerer én aktivitet (event) og har følgende felter:
+
+| Felt          | Type        | Beskrivelse                                                                                 |
+| ------------- | ----------- | ------------------------------------------------------------------------------------------- |
+| `title`       | `string`    | Tittel på aktiviteten.                                                                     |
+| `content`     | `string`    | Beskrivelse eller innholdstekst (forkortet).                                               |
+| `id`          | `int`       | Unik ID for eventet (post ID i WordPress).                                                 |
+| `from`        | `string`    | Starttidspunkt som UNIX-timestamp (i **sekunder**).                                        |
+| `to`          | `string`    | Sluttidspunkt som UNIX-timestamp (i **sekunder**).                                         |
+| `isAllDay`    | `string`    | `"1"` hvis heldagsaktivitet, tom streng ellers.                                            |
+| `isCancelled` | `string`    | `"1"` hvis avlyst, tom streng ellers.                                                      |
+| `location`    | `string`    | Adresse eller koordinater (lat,long) som streng.                                           |
+| `organizer`   | `object`    | Arrangør‐objekt med feltene:                                                                   |
+|               |             | - `id` (`string`): Arrangørens ID.                                                         |
+|               |             | - `name` (`string`): Navn på arrangøren.                                                  |
+|               |             | - `selected` (`string`): Intern bruk (vanligvis tom).                                      |
+| `image`       | `string`    | URL til eventets forsidebilde.                                                             |
+| `url`         | `string`    | Lenke til eventets egen side på nettstedet.                                                |
+| `categories`  | `array`     | Liste av kategorinavn (`string`) som eventet tilhører.                                     |
+| `isFull`      | `boolean`   | `true` dersom maksimal påmeldingsgrense er nådd, `false` ellers.                           |
+| `county`      | `string`    | Fylkesnavn der aktiviteten finner sted (f.eks. `"Hordaland"`).                             |
+| `municipality`| `string`    | Kommunenavn (f.eks. `"Bergen"`); tom streng hvis ikke satt.                                |
+
+### Merknader
+
+- `from` og `to` er UNIX-tidsstempler i sekunder. For eksempel representerer `"1741765200"` et bestemt tidspunkt i 2025.  
+- `isAllDay` og `isCancelled` er tomme strenger (`""`) når de er `false`.  
+- `location` kan være tomt dersom ingen adresse eller koordinater er angitt.  
+- `categories` er alltid en liste (kan være tom).  
+- Feltene `county` og `municipality` gir mulighet for geografisk filtrering og visning.
